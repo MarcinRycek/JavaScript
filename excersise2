@@ -1,0 +1,29 @@
+//Zad.4
+String.prototype.mirror = function() {
+ let mirrored="";
+  for(let i=this.length-1;i>=0;i--){
+   mirrored+=(this[i]);
+ }
+  return mirrored;
+}
+console.log("Ala ma kota".mirror());
+//Zad.5
+
+function createCounter(){
+  let counter=0;
+  function counterIn(){
+    counter++;
+    return counter;
+  }
+  return counterIn;
+}
+const counter1 = createCounter();
+console.log(counter1()); // 1
+console.log(counter1()); // 2
+console.log(counter1()); // 3
+
+const counter2 = createCounter();
+console.log(counter2()); // 1
+console.log(counter2()); // 2
+
+ 
